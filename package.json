@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "wrangler dev --local",
     "dev-migrate": "wrangler d1 migrations apply kemunita_db --local",
-
     "build": "wrangler build",
     "publish": "wrangler publish"
   },
