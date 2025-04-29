@@ -5,7 +5,7 @@ compatibility_date = "2025-04-29"
 [[d1_databases]]
 binding = "DB"
 database_name = "kemunita_db"
-database_id = "kemunita_db"
+database_id = "97c2eb9b-015c-4462-8f23-d931492c9fd5"
 
 [vars]
 CACHE_TIME = 300
