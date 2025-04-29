@@ -57,8 +57,7 @@ export const calendarHandler = async (c: Context<{ Bindings: Bindings }>) => {
       description: fullData.description,
       updated: fullData.updated,
       timeZone: fullData.timeZone,
-      items: (fullData.items || []).map((item: any, index: number) => ({
-        index,
+      items: (fullData.items || []).map((item: CalendarEvent & { [key: string]: any }) => ({
         created: item.created,
         updated: item.updated,
         summary: item.summary,
@@ -70,7 +69,7 @@ export const calendarHandler = async (c: Context<{ Bindings: Bindings }>) => {
         const dateA = new Date(a.start.dateTime || a.start.date || '').getTime();
         const dateB = new Date(b.start.dateTime || b.start.date || '').getTime();
         return dateA - dateB;
-      }),
+      }).map((item: CalendarEvent, index: number) => ({ ...item, index })),
     };
 
     c.executionCtx.waitUntil(

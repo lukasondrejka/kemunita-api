@@ -7,7 +7,7 @@ export interface CalendarData {
 }
 
 export interface CalendarEvent {
-  index: number;
+  index?: number;
   created: string; // ISO timestamp
   updated: string; // ISO timestamp
   summary: string;
