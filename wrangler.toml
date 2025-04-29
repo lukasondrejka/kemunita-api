@@ -1,0 +1,13 @@
+name = "kemunita-api"
+main = "src/index.ts"
+compatibility_date = "2025-04-29"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "kemunita_db"
+database_id = "kemunita_db"
+
+[vars]
+CACHE_TIME = 300
+GOOGLE_CALENDAR_ID = "35fcf776db47a319bd987cbf7073325f9fb9fb91b804a0589ffb6de4b8b39c11@group.calendar.google.com"
+# GOOGLE_CALENDAR_API_KEY = ""
